@@ -1,0 +1,87 @@
+<!-- Author: Aether Mocker -->
+<!DOCTYPE html>
+
+<html lang="en-us"> 
+	<head>
+		<link rel="stylesheet" type="text/css" href="stylesheets/mocker26_hw2.css"/>
+		<meta charset="UTF-8">
+		<title>mocker26 HW1 Cheesecake Order Form</title>
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="javascripts/script.js"> </script>
+
+	</head>
+
+	<body>
+
+		<h1> Cheesecake Order Form</h1>
+
+		<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/My_first_cheesecake_cropped.jpg/440px-My_first_cheesecake_cropped.jpg" alt="Cheesecake, source: Wikipedia" width="300" height="200">
+
+		<!--QTY AND TOPPINGS FORM-->
+		<h3 id="order_text">Quantity & Topping: </h3>
+
+		<form id="order_form">
+				<!--TOPPINGS SELECTION-->
+				<input type="radio" id="plain" name="topping" value="Plain">
+				<label for="plain">Plain</label><br>
+
+				<input type="radio" id="cherry" name="topping" value="Cherry">
+				<label for="cherry">Cherry</label><br>
+
+				<input type="radio" id="chocolate" name="topping" value="Chocolate">
+				<label for="chocolate">Chocolate</label><br>
+				
+				<!--QUANTITY - no dropdown, but rather slider. hope this works as well -->
+				<label for="qty">Quantity(1-10): </label>
+				<input type="range" id="qty" name="qty" min="1" max="10"><br>
+				
+				<!--NOTES SECTION-->
+				<label id="notes_label" for="notes">Notes:</label><br>
+				<input type="text" id="notes" name="notes" width="300" height="300" 
+				placeholder="Enter special instructions here!">
+				<br>
+			
+				<!--SUBMIT BUTTON-->
+				<br><input id="order_button"><br>
+		</form>
+		
+		<!--TOTAL ORDERS TEXT 	
+		sources: https://www.w3schools.com/jquery/tryit.asp?filename=tryjquery_dom_html_set
+		sources: https://www.w3schools.com/jquery/tryit.asp?filename=tryjquery_slide_toggle
+		sources: https://stackoverflow.com/questions/8775860/jquery-drop-down-hover-menu  -->
+		
+		<table id="table2">
+			<tbody><tr>	
+				<th><h3 id="h3">Orders for: </h3></th>
+				<th><button id="month_button">Scroll here!
+					<div id="panel">
+					<ul id="month_dropdown">
+						<li><a id="jan">Jan</a></li>
+  			      			<li><a id="feb">Feb</a></li>
+        					<li><a id="mar">Mar</a></li>
+    			    			<li><a id="apr">Apr</a></li>
+        					<li><a id="may">May</a></li>
+						<li><a id="jun">Jun</a></li>
+						<li><a id="jul">Jul</a></li>
+        					<li><a id="aug">Aug</a></li>
+        					<li><a id="sep">Sep</a></li>
+        					<li><a id="oct">Oct</a></li>
+        					<li><a id="nov">Nov</a></li>
+        					<li><a id="Dec">Dec</a></li>
+					</ul>
+					</div>	
+					</button></th>
+				</tr>
+			</tbody>
+		</table><br>
+
+		<ul id="order_info">
+			<li>11 cherry</li>
+			<li>17 chocolate</li>
+			<li> 31 plain</li>
+		</ul>
+
+		<br><br>
+	</body>
+</html>

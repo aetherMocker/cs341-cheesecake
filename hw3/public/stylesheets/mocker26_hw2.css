@@ -1,0 +1,83 @@
+/* Author: Aether Mocker */
+
+@charset "UTF-8";
+html {
+	background-color: #ffdeec;
+}
+
+img {
+	border: solid 5px #FFFFFF;
+}
+
+body {
+	border-style: double;
+	border: solid 5px #FFFFFF;
+	//background-color: #cc81a1;
+}
+
+h1 {
+	color: #570839;
+	font-family: "Copperplate", Fantasy;
+	font-size: 36px;
+}
+
+h3 {
+	color: #d90961;
+	font-size: 23px;
+}	
+
+p, #order_form, #order_info, #order_button {
+	color: #d90961;
+	font-family: "Monaco", monospace;
+}
+
+#order_button {
+	background-color: #cc81a1;
+}
+
+ul, li {
+    color: #d90961;
+    margin:0; 
+    padding:0; 
+    list-style:none;
+}
+
+/* from w3schools.com and https://stackoverflow.com/questions/8775860/jquery-drop-down-hover-menu */
+
+#panel, #month_button {
+  padding: 5px;
+  text-align: center;
+  background-color: #cc81a1;
+  border: solid 5px #FFFFFF;
+}
+
+#panel {
+  height: 50px;
+  max-height: 50px;
+  overflow-y: scroll;
+  display: none;
+}
+
+.month_dropdown {
+    display:none;
+    width:300px;
+    border: 1px solid #1c1c1c;
+}
+
+.month_dropdown li {
+    background-color: #302f2f;
+}
+
+.month_dropdown li a {
+    color:#FFFFFF; 
+    text-decoration:none; 
+    padding:10px; 
+    display:block;
+}
+
+.month_dropdown li a:hover {
+    padding:5px;
+    font-weight:bold;
+    color: #F00880;
+}
+
