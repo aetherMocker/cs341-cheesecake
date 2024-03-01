@@ -24,11 +24,13 @@ router.post('/', function(req, res, next) {
   console.log("made it here: " + res.req.body.MONTH);
   
   dbms.query("select * from ORDERS where MONTH= '"+ res.req.body.MONTH +"'", function(err, results) {
+    console.log("made it in query: " + res.req.body.MONTH);
+    
     cheeseCakeData[0].quantity = 0;
     cheeseCakeData[1].quantity = 0;
     cheeseCakeData[2].quantity = 0;
 
-    //if there's no error with the sql query
+    //if there's no problem with the sql query
     if(!(err == null)) {
 
       for(var i = 0; i < results.length; i++) {

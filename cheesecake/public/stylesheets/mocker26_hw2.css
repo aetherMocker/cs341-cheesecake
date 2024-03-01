@@ -3,6 +3,7 @@
 @charset "UTF-8";
 html {
 	background-color: #ffdeec;
+    text-align: center;
 }
 
 img {
@@ -14,7 +15,8 @@ body {
 	border: solid 5px #FFFFFF;
 }
 
-#order_form_div, #order_info_div {
+#order_form_div, #order_info_div, h1 {
+    text-align: center;
     background-color: #ecaac7;
     border-style: double;
 	border: solid 5px #FFFFFF;
@@ -22,9 +24,9 @@ body {
 
 h1 {
 	color: #570839;
-	font-family: "Copperplate", Fantasy;
+	font-family: "Copperplate";
 	font-size: 36px;
-}
+} 
 
 h3 {
 	color: #d90961;
@@ -33,12 +35,21 @@ h3 {
 
 p, #order_form, #order_info, #order_button {
 	color: #d90961;
+    font-size: 14px;
 	font-family: "Monaco", monospace;
+}
+
+#table2 {
+    text-align: center;
+    margin-left: 40%;
+    margin-right: 30%;
+    padding: 2px;
 }
 
 #order_button {
 	background-color: #cc81a1;
     cursor: pointer;
+    border: solid 4px #FFFFFF;
 }
 
 ul, li {

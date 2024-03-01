@@ -65,6 +65,6 @@ function monthClick(month_name) {
         $("#cherry_info").text(cherry_counter + " cherry");
         $("#choco_info").text(choco_counter + " chocolate");
         $("#plain_info").text(plain_counter + " plain");
-    });
-    console.log("made it here");
+    }); 
+    console.log("after POST");
 }
