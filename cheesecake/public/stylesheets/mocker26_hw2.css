@@ -12,7 +12,12 @@ img {
 body {
 	border-style: double;
 	border: solid 5px #FFFFFF;
-	//background-color: #cc81a1;
+}
+
+#order_form_div, #order_info_div {
+    background-color: #ecaac7;
+    border-style: double;
+	border: solid 5px #FFFFFF;
 }
 
 h1 {
@@ -33,6 +38,7 @@ p, #order_form, #order_info, #order_button {
 
 #order_button {
 	background-color: #cc81a1;
+    cursor: pointer;
 }
 
 ul, li {
@@ -47,8 +53,9 @@ ul, li {
 #panel, #month_button {
   padding: 5px;
   text-align: center;
-  background-color: #cc81a1;
-  border: solid 5px #FFFFFF;
+  color: #931348;
+  background-color: #f1d0df;
+  border: solid 2px #FFFFFF;
 }
 
 #panel {
@@ -56,6 +63,7 @@ ul, li {
   max-height: 50px;
   overflow-y: scroll;
   display: none;
+  cursor: pointer;
 }
 
 .month_dropdown {

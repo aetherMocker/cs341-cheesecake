@@ -8,80 +8,89 @@
 		<title>mocker26 HW1 Cheesecake Order Form</title>
 		
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-		<script src="javascripts/script.js"> </script>
+		<script src="/javascripts/script.js"> </script>
 
 	</head>
 
 	<body>
 
-		<h1> Cheesecake Order Form</h1>
+		<h1>Cheesecake Order Form</h1>
 
 		<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/My_first_cheesecake_cropped.jpg/440px-My_first_cheesecake_cropped.jpg" alt="Cheesecake, source: Wikipedia" width="300" height="200">
 
 		<!--QTY AND TOPPINGS FORM-->
-		<h3 id="order_text">Quantity & Topping: </h3>
+		<div id="order_form_div">
+			<h3 id="order_text">Quantity & Topping: </h3>
 
-		<form id="order_form">
-				<!--TOPPINGS SELECTION-->
-				<input type="radio" id="plain" name="topping" value="Plain">
-				<label for="plain">Plain</label><br>
+			<form id="order_form">
+					<!--TOPPINGS SELECTION-->
+					<input type="radio" id="plain" name="topping" value="Plain">
+					<label for="plain">Plain</label><br>
 
-				<input type="radio" id="cherry" name="topping" value="Cherry">
-				<label for="cherry">Cherry</label><br>
+					<input type="radio" id="cherry" name="topping" value="Cherry">
+					<label for="cherry">Cherry</label><br>
 
-				<input type="radio" id="chocolate" name="topping" value="Chocolate">
-				<label for="chocolate">Chocolate</label><br>
+					<input type="radio" id="chocolate" name="topping" value="Chocolate">
+					<label for="chocolate">Chocolate</label><br>
+					
+					<!--QUANTITY - no dropdown, but rather slider. hope this works as well -->
+					<br><label for="qty">Quantity (1-10): </label>
+					<input type="range" id="qty" name="qty" min="1" max="10"><br>
+					
+					<!--NOTES SECTION-->
+					<br><label id="notes_label" for="notes">Notes:</label><br>
+					<input type="text" id="notes" name="notes" width="300" height="300" 
+					placeholder="Enter special instructions here!">
+					<br>
 				
-				<!--QUANTITY - no dropdown, but rather slider. hope this works as well -->
-				<label for="qty">Quantity(1-10): </label>
-				<input type="range" id="qty" name="qty" min="1" max="10"><br>
-				
-				<!--NOTES SECTION-->
-				<label id="notes_label" for="notes">Notes:</label><br>
-				<input type="text" id="notes" name="notes" width="300" height="300" 
-				placeholder="Enter special instructions here!">
-				<br>
-			
-				<!--SUBMIT BUTTON-->
-				<br><input id="order_button"><br>
-		</form>
+					<!--SUBMIT BUTTON-->
+					<br><p>Submit Order:</p>
+					<input id="order_button"><br>
+			</form><br>
+		</div>
 		
 		<!--TOTAL ORDERS TEXT 	
 		sources: https://www.w3schools.com/jquery/tryit.asp?filename=tryjquery_dom_html_set
 		sources: https://www.w3schools.com/jquery/tryit.asp?filename=tryjquery_slide_toggle
 		sources: https://stackoverflow.com/questions/8775860/jquery-drop-down-hover-menu  -->
 		
-		<table id="table2">
+		<br>
+		<div id="order_info_div">
+			<table id="table2">
 			<tbody><tr>	
 				<th><h3 id="h3">Orders for: </h3></th>
 				<th><button id="month_button">Scroll here!
 					<div id="panel">
 					<ul id="month_dropdown">
-						<li><a id="jan">Jan</a></li>
-  			      			<li><a id="feb">Feb</a></li>
-        					<li><a id="mar">Mar</a></li>
-    			    			<li><a id="apr">Apr</a></li>
-        					<li><a id="may">May</a></li>
-						<li><a id="jun">Jun</a></li>
-						<li><a id="jul">Jul</a></li>
-        					<li><a id="aug">Aug</a></li>
-        					<li><a id="sep">Sep</a></li>
-        					<li><a id="oct">Oct</a></li>
-        					<li><a id="nov">Nov</a></li>
-        					<li><a id="Dec">Dec</a></li>
+						<li><a onClick="monthClick('Jan')" id="jan">Jan</a></li>
+						<li><a onClick="monthClick('Feb')" id="feb">Feb</a></li>
+						<li><a onClick="monthClick('Mar')" id="mar">Mar</a></li>
+						<li><a onClick="monthClick('Apr')" id="apr">Apr</a></li>
+						<li><a onClick="monthClick('May')" id="may">May</a></li>
+						<li><a onClick="monthClick('Jun')" id="jun">Jun</a></li>
+						<li><a onClick="monthClick('Jul')" id="jul">Jul</a></li>
+						<li><a onClick="monthClick('Aug')" id="aug">Aug</a></li>
+						<li><a onClick="monthClick('Sep')" id="sep">Sep</a></li>
+						<li><a onClick="monthClick('Oct')" id="oct">Oct</a></li>
+						<li><a onClick="monthClick('Nov')" id="nov">Nov</a></li>
+						<li><a onClick="monthClick('Dec')" id="Dec">Dec</a></li>
 					</ul>
 					</div>	
 					</button></th>
 				</tr>
 			</tbody>
-		</table><br>
+			</table>
 
-		<ul id="order_info">
-			<li id="cherry_info">11 cherry</li>
-			<li id="choco_info">17 chocolate</li>
-			<li id="plain_info"> 31 plain</li>
-		</ul>
+			<div id="order_info_div">
+				<ul id="order_info">
+					<li id="cherry_info">11 cherry</li>
+					<li id="choco_info">17 chocolate</li>
+					<li id="plain_info">31 plain</li>
+				</ul>
+			</div><br><br>
+			
+		</div>
 
-		<br><br>
+		<br>
 	</body>
 </html>
