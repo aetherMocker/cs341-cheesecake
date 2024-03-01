@@ -41,7 +41,7 @@ function monthClick(month_name) {
     
     //issue post to the server requesting the orders for a particular month
     $.post('/orders', { MONTH: month_name }, function(response) {
-        console.log("inside post: " + month_name);
+        console.log("inside POST: " + month_name);
         let plain_counter = 0;
         let cherry_counter = 0;
         let choco_counter = 0;
@@ -65,6 +65,7 @@ function monthClick(month_name) {
         $("#cherry_info").text(cherry_counter + " cherry");
         $("#choco_info").text(choco_counter + " chocolate");
         $("#plain_info").text(plain_counter + " plain");
-    }); 
+    });
     console.log("after POST");
 }
+

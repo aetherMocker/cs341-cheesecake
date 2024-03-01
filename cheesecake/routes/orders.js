@@ -8,7 +8,7 @@
 
 var express = require('express');
 var router = express.Router();
-var dbms = require('./dbms');
+var dbms = require('./dbms_promise');
 
 //data to send
 var cheeseCakeData = [
@@ -25,7 +25,7 @@ router.post('/', function(req, res, next) {
   
   dbms.query("select * from ORDERS where MONTH= '"+ res.req.body.MONTH +"'", function(err, results) {
     console.log("made it in query: " + res.req.body.MONTH);
-    
+
     cheeseCakeData[0].quantity = 0;
     cheeseCakeData[1].quantity = 0;
     cheeseCakeData[2].quantity = 0;
@@ -47,11 +47,14 @@ router.post('/', function(req, res, next) {
           }
       }
 
-      //send data...
-      res.json({ error: null, data: cheeseCakeData});
+      // send data...
+      res.json({ error: null, data: cheeseCakeData });
+    } else {
+      // handle the error if there's an issue with the database query
+      console.error("Database query failed:", err);
+      res.json({ error: "Database query failed", data: null });
     }
-  })
-  res.json( {error: null, data: cheeseCakeData });
+  });
 });
 
 module.exports = router;
